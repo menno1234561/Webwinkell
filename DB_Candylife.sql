@@ -13,7 +13,7 @@ CREATE TABLE Klant (
 	PRIMARY KEY(Voornaam, Achternaam, EmailAdres)
 );
 
-CREATE TABLE Bestelling (
+CREATE TABLE Order (
 	OrderNummer		INT(16),
 	Datum			DATE,
 	Tijd			TIME,	
