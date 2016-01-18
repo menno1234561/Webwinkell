@@ -1,0 +1,84 @@
+* {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+a {
+	color:#333;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#333;
+	text-decoration:underline;
+}
+
+body {
+	background:#ffffff;
+	width: 80%;
+	margin: 30px;
+	color:#555;
+	font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+}
+
+p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#plaatje {
+	margin-top: 10px;
+	border:1px solid #444;
+}
+
+
+input, select, .input {
+	padding: 5px;
+	// font-weight: bold;
+	font-size: 1em;
+	color: #008040;
+}
+
+.button {
+    border: 1px solid #006;
+    background: #9cf;
+	margin: 10px;
+	float: right;
+	width: 100px;
+	margin: 20px;
+}
+
+#invoer {
+	width: 300px;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+table, td, th {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-size: 1.0em;
+}
+
+table 
+{
+	width:700px;
+	border-collapse:collapse;
+	text-align:left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+th {
+	background-color: #eee;
+	color:	black;
+	height: 20px;
+	padding: 5px;
+}
+
+td {
+	height: 25px;
+	vertical-align: bottom;
+	padding: 5px;
+}

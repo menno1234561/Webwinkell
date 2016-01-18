@@ -1,0 +1,59 @@
+﻿<?php session_start(); ?>
+<html>
+<head>
+<title><?php echo $page_title; ?></title>	
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+<meta charset="UTF-8">
+<script type="text/javascript">
+<!--
+function logOut() {
+	var answer = confirm ('Weet je zeker dat je wilt uitloggen?')
+	if (answer)
+		window.location="logout.php";
+}
+//-->
+</script>
+</head>
+<body>
+<div id="header">
+<h1>De WebWinkel</h1>
+<h2>heeft alles wat je wilt</h2>
+<?php
+	// Toon de inhoud van je winkelwagen en de naam van de gebruiker linksboven in header.
+	echo "<ul id='menu'>\n";
+	// Kijk of er iets in de winkelwagen zit
+	if (empty($_SESSION['cart'])) {
+		echo "<li>Winkelwagen is leeg</li>\n";
+	} else {
+		// Exploden
+		$cart2 = explode("|",$_SESSION['cart']);
+
+		// Tellen inhoud winkelwagen
+		$count = count($cart2);
+		if ($count == 1) {
+			echo "<li>1 product ";
+		} else {
+			echo "<li>".$count." producten ";
+		}
+		echo "in <a href=\"cart.php\">winkelwagen</a></li>\n";
+
+	}
+	if (empty($_SESSION['klantnr'])) {
+		echo "<li>U bent niet ingelogd | <a href=\"login.php\">login</a></li>\n";
+	} else {
+		echo "<li>Welkom <a href=\"account.php\">".$_SESSION['klantnaam']."</a> | <a href=\"javascript:logOut()\">logout</a></li>\n";
+	}
+	echo("</ul>");
+?>
+</div>
+
+<div id="navigation">
+<ul>
+<li><a href="index.php">Homepage</a></li>
+<li><a href="categorieA.php">Categorie A</a></li>
+<li><a href="categorieB.php">Categorie B</a></li>
+<li><a href="beheer.php">Beheer</a></li>
+</ul>
+</div>
+<div id="content">
+<!-- Start of the page-specific content. -->
